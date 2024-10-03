@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "744f5b11-a4e2-4009-a158-ac856c9162cd",
+		"name": "Test Delete booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38676283"
+	},
+	"item": [
+		{
+			"name": "Delete booking",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"const createbooking={\r",
+							"url: pm.environment.get('rb_url')+\"/booking\",\r",
+							"Method:'POST',\r",
+							"header:'Content-Type : application/json' ,\r",
+							"body:{\r",
+							"    mode:'raw',\r",
+							"    raw: JSON.stringify(pm.variables.get(\"new_booking\"))\r",
+							"\r",
+							"\r",
+							"}\r",
+							"\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=abc123"
+					}
+				],
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/booking/{{booking_ID}}",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"booking",
+						"{{booking_ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

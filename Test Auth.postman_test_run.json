@@ -1,0 +1,61 @@
+{
+	"id": "1f0de9b4-c316-4dc3-bcb4-f5ebef1fb352",
+	"name": "Test Auth",
+	"timestamp": "2024-10-01T22:31:09.030Z",
+	"collection_id": "38676283-2341bda4-8303-4a7d-84dc-964ca532210d",
+	"folder_id": 0,
+	"environment_id": "38676283-5f413eee-e194-4e4c-9c4c-deae765db35e",
+	"totalPass": 3,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-10-01T22:31:07.673Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5d58a031-5f2c-4c1e-8d08-625cbe52794d",
+			"name": "Auth",
+			"url": "https://restful-booker.herokuapp.com/auth",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"check authorization": true
+			},
+			"testPassFailCounts": {
+				"check authorization": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				471,
+				134,
+				136
+			],
+			"allTests": [
+				{
+					"check authorization": true
+				},
+				{
+					"check authorization": true
+				},
+				{
+					"check authorization": true
+				}
+			]
+		}
+	],
+	"count": 3,
+	"totalTime": 741,
+	"collection": {
+		"requests": [
+			{
+				"id": "5d58a031-5f2c-4c1e-8d08-625cbe52794d",
+				"method": "POST"
+			}
+		]
+	}
+}
